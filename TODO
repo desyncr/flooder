@@ -1,0 +1,14 @@
+* DBProxy::getProxy, DBProxy::getProxyList, etc. Must return an array of hashes of the form @list[ {ip, port,...}, {ip, port, ...}]
+    The idea is to abstract the inner working of the class.
+
+* Bot ID to identify each bot.
+    The idea is to be able to run different bots with different configurations and be able to indentify each of them.
+
+* Flag non-working servers. Count posts per server.
+    Avoid using servers that can't connect. Use statistics (number of posts, failed posts, uptime) to select proxies.
+
+* Shitposter (build posts with random/crappy content)
+    Posting random images is easily stopped with captcha. Using demotivational posting would be a better approach as it would be hard to identify as a bot (and thus banned, raise captcha) but still the post must be stupid/useless/crap (remember conversational bot on Freenet's Frost boards)
+
+* Enhance $response handling (handle the most return codes)
+    It necesary to build good statistics for proxies etc.
